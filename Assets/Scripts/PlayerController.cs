@@ -61,7 +61,6 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) // 0 corresponde al clic izquierdo del mouse
         {
-            
             animator.SetTrigger("Attack01"); // Activa la animación de ataque
         }
 

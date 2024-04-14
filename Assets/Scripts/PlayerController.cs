@@ -50,13 +50,24 @@ public class PlayerController : MonoBehaviour
 
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
             }
-            // Habilitar el componente Animator para reproducir la animación
+
             animator.SetBool("RunForward", true);
+            
         }
         else
         {
-            // Habilitar el componente Animator para reproducir la animación
             animator.SetBool("RunForward", false);
+        }
+
+        if (Input.GetMouseButtonDown(0)) // 0 corresponde al clic izquierdo del mouse
+        {
+            
+            animator.SetTrigger("Attack01"); // Activa la animación de ataque
+        }
+
+        if (Input.GetMouseButtonDown(1)) // 0 corresponde al clic derecho del mouse
+        {
+            animator.SetTrigger("Defend01"); // Activa la animación de ataque
         }
         
 
